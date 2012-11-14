@@ -18,6 +18,7 @@ public class UserServiceImpl
         user.setFirstName(firstName);
         user.setPassword(password);
         database.put(userName, user);
+        System.out.println(user);
         return user;
     }
 
