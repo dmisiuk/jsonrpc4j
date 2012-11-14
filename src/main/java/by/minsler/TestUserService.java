@@ -16,5 +16,6 @@ public class TestUserService {
                 new URL("http://localhost:8080/json"));
 
         User user = client.invoke("createUser", new Object[] { "bob", "the builder" }, User.class);
+        System.out.println(user);
     }
 }
