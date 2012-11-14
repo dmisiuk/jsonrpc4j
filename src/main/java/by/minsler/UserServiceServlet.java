@@ -34,6 +34,11 @@ public class UserServiceServlet extends HttpServlet {
     }
 
     @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        this.doPost(req, resp);
+    }
+
+    @Override
     public void init(ServletConfig config) {
         UserService userService = new UserServiceImpl();
         PrinterService printerService = new PrinterServiceImpl();

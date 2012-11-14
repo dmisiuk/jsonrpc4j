@@ -9,7 +9,8 @@ import java.io.Serializable;
  */
 public class User implements Serializable {
 
-    private String userName, firstName, password;
+    private String userName;
+    private String firstName, password;
 
 
     public User() {
@@ -21,7 +22,7 @@ public class User implements Serializable {
         this.password = password;
     }
 
-    public User(String userName, String password) {
+    public User( String userName, String password) {
         this.userName = userName;
         this.password = password;
     }

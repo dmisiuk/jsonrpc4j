@@ -8,15 +8,21 @@ var send = function(post_body){$.ajax({
     })
 }
 
-var sendPost = function(url, data) {
-    return $.post(url, JSON.stringify(a));
+var last_result;
+
+var sendPost = function(url, req) {
+    return $.post(url, JSON.stringify(req),function(data){
+
+        alert("Data Loaded: " + data);
+
+        console.log("sended");
+        },
+        "application/json-rpc"
+        );
 }
 
 function Request(method, params)
 {
-
-//{"id":"232","jsonrpc":"2.0","method":"createUser","params":["bob","бобик","the builder"]}"
-
     this.jsonrpc = "2.0";
 
     this.method = method;

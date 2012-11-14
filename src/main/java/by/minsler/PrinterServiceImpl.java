@@ -7,7 +7,7 @@ import java.util.List;
  * Date: 11/14/12
  * Time: 3:49 PM
  */
-public class PrinterServiceImpl implements PrinterService{
+public class    PrinterServiceImpl implements PrinterService{
 
 
     @Override
@@ -17,7 +17,13 @@ public class PrinterServiceImpl implements PrinterService{
     }
 
     @Override
-    public StringBuilder printWordArray(List<String> words ) {
+    public String printUser(User user) {
+        System.out.println(user);
+        return user.toString();
+    }
+
+    @Override
+    public StringBuilder printWordArray(List<String> words) {
         StringBuilder sb = new StringBuilder();
         for(String word:words){
             System.out.println(word);
@@ -25,4 +31,5 @@ public class PrinterServiceImpl implements PrinterService{
         }
         return sb;
     }
+
 }

@@ -9,8 +9,9 @@ import java.util.List;
  */
 public interface PrinterService {
 
-    String printWord(String word);
+    public String printWord(String word);
 
+    public String printUser(User user);
 
-    StringBuilder printWordArray(List<String> words);
+    public StringBuilder printWordArray(List<String> words);
 }

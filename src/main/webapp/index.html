@@ -3,15 +3,38 @@
 
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>test jsonrpc4j</title>
     <script src="js/jquery.js" type="text/javascript"></script>
     <script src="js/jsonrpc.js" type="text/javascript"></script>
+    <script src="js/jquery.jsonrpc.js" type="text/javascript"></script>
 </head>
 <body>
 <h2>jsonrpc4j test</h2>
 
+
+
 <form action="/json" method="post">
     <input type="submit" value="test with post message">
 </form>
+
+<br>
+
+<form action="/json" method="get">
+    Params:<br>
+    <input type="text" name="params">
+    <br>
+    Method name:<input type="text" name="method" value="getUserCount"><br>
+    ID: <input type="text" name="id" value="10"><br>
+    <input type="submit" value="test with get method">
+</form>
+
+
+<a href="javacript:"></a>
 </body>
 </html>
+
+
+<!--request.getParameter("method"),-->
+<!--request.getParameter("id"),-->
+<!--request.getParameter("params"));-->

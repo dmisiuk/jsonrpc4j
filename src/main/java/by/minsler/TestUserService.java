@@ -17,8 +17,8 @@ public class TestUserService {
         JsonRpcHttpClient client = new JsonRpcHttpClient(
                 new URL("http://localhost:8080/json"));
 
-//        User user = client.invoke("createUser", new Object[] { "bob", "бобик","the builder" }, User.class);
-//        System.out.println(user);
+        User user = client.invoke("createUser", new Object[] { "bob", "бобик","the builder" }, User.class);
+        System.out.println(user);
 
         String word = client.invoke("printWord",new Object[]{"dima"},String.class);
         System.out.println(word);
@@ -31,6 +31,11 @@ public class TestUserService {
 
         StringBuilder words = client.invoke("printWordArray",new Object[]{wordList},StringBuilder.class);
         System.out.println(words);
+
+        Integer count = client.invoke("getUserCount",new Object[]{},Integer.class);
+        System.out.println("count: " + count);
+
+
 
     }
 }
